@@ -84,8 +84,15 @@ const fadeInObserver = new IntersectionObserver(function(entries) {
     });
 }, fadeInOptions);
 
-// Apply fade-in animation to sections
+// Apply fade-in animation to sections (except projects which should always be visible)
 document.querySelectorAll('section').forEach(section => {
+    // Skip animation for projects section to ensure immediate visibility
+    if (section.id === 'projects') {
+        section.style.opacity = '1';
+        section.style.transform = 'translateY(0)';
+        return;
+    }
+    
     section.style.opacity = '0';
     section.style.transform = 'translateY(20px)';
     section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
