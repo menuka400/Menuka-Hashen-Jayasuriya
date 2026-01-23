@@ -69,6 +69,11 @@ if (skillsSection) {
 }
 
 // Animate elements on scroll
+const fadeInOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
 const fadeInObserver = new IntersectionObserver(function(entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -76,7 +81,7 @@ const fadeInObserver = new IntersectionObserver(function(entries) {
             entry.target.style.transform = 'translateY(0)';
         }
     });
-}, observerOptions);
+}, fadeInOptions);
 
 // Apply fade-in animation to sections
 document.querySelectorAll('section').forEach(section => {
@@ -108,13 +113,39 @@ if (contactForm) {
         const email = document.getElementById('email').value;
         const subject = document.getElementById('subject').value;
         const message = document.getElementById('message').value;
+        const statusDiv = document.getElementById('form-status');
         
-        // Here you would typically send the form data to a server
-        // For now, we'll just show an alert
-        alert(`Thank you, ${name}! Your message has been received. I'll get back to you soon at ${email}.`);
+        // Replace this URL with your Google Apps Script web app URL
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyuhnD42BhJjLYoBvOVTkD_LbJlWwPMQYNRfWOEsNAgOlPqYUAawp-s61k4pKbx2LHrwA/exec';
         
-        // Reset form
-        contactForm.reset();
+        // Show sending status
+        statusDiv.style.display = 'block';
+        statusDiv.textContent = 'Sending message...';
+        statusDiv.style.color = '#00d4ff';
+        
+        // Create form data
+        const formData = new FormData();
+        formData.append('name', name);
+        formData.append('email', email);
+        formData.append('subject', subject);
+        formData.append('message', message);
+        
+        // Send data to Google Apps Script using no-cors mode
+        fetch(scriptURL, {
+            method: 'POST',
+            body: formData,
+            mode: 'no-cors'
+        })
+        .then(() => {
+            statusDiv.textContent = `Thank you, ${name}! Your message has been sent successfully.`;
+            statusDiv.style.color = '#00d4ff';
+            contactForm.reset();
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            statusDiv.textContent = 'Sorry, there was an error sending your message. Please try again or email directly.';
+            statusDiv.style.color = '#ff006e';
+        });
     });
 }
 
