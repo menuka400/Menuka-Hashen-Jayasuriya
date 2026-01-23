@@ -70,8 +70,8 @@ if (skillsSection) {
 
 // Animate elements on scroll
 const fadeInOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    threshold: 0.05,
+    rootMargin: '0px 0px -20px 0px'
 };
 
 const fadeInObserver = new IntersectionObserver(function(entries) {
@@ -79,6 +79,7 @@ const fadeInObserver = new IntersectionObserver(function(entries) {
         if (entry.isIntersecting) {
             entry.target.style.opacity = '1';
             entry.target.style.transform = 'translateY(0)';
+            fadeInObserver.unobserve(entry.target);
         }
     });
 }, fadeInOptions);
