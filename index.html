@@ -1,878 +1,580 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Embedded Systems Engineer | AI/ML Specialist</title>
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- Navigation -->
+    <!-- Background grid decoration -->
+    <div class="bg-grid"></div>
+
     <nav class="navbar">
-        <div class="container">
+        <div class="container nav-container">
             <div class="logo">
-                <h2><i class="fas fa-microchip"></i> Portfolio</h2>
+                <a href="#home">MHJ.</a>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                <div class="toggle-track">
-                    <div class="toggle-thumb">
-                        <i class="fas fa-sun sun-icon"></i>
-                        <i class="fas fa-moon moon-icon"></i>
-                    </div>
+
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-sun sun-icon"></i>
+                    <i class="fas fa-moon moon-icon"></i>
+                </button>
+
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
                 </div>
-            </button>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="main-title">EMBEDDED SYSTEMS ENGINEER</h1>
-                <p class="hero-description">
-                    Specializing in Computer Vision, AI, ML & Deep Learning. Bridging the gap between 
-                    hardware and intelligent systems with cutting-edge embedded solutions.
-                </p>
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                </div>
-            </div>
-            <div class="hero-animation">
-                <div class="robot-container">
-                    <div class="robot">
-                        <div class="robot-head">
-                            <div class="antenna"></div>
-                            <div class="eye eye-left"></div>
-                            <div class="eye eye-right"></div>
-                            <div class="mouth"></div>
-                        </div>
-                        <div class="robot-body">
-                            <div class="circuit-line line-1"></div>
-                            <div class="circuit-line line-2"></div>
-                            <div class="circuit-line line-3"></div>
-                            <div class="led led-1"></div>
-                            <div class="led led-2"></div>
-                            <div class="led led-3"></div>
-                        </div>
-                        <div class="robot-arms">
-                            <div class="arm arm-left"></div>
-                            <div class="arm arm-right"></div>
-                        </div>
-                    </div>
-                    <div class="floating-icons">
-                        <i class="fas fa-microchip"></i>
-                        <i class="fas fa-robot"></i>
-                        <i class="fas fa-brain"></i>
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <a href="#about"><i class="fas fa-chevron-down"></i></a>
-        </div>
-    </section>
+    <main>
+        <section id="home" class="hero section-padding">
+            <div class="container hero-grid">
+                <div class="hero-text reveal-up">
+                    <div class="hero-eyebrow">SYSTEMS & AI ENGINEER</div>
+                    <h1 class="hero-title">INTELLIGENT <br><span class="accent-text">MACHINES.</span></h1>
+                    <p class="hero-desc">Bridging the gap between AI and robotics — turning intelligent models into
+                        real-world action. Specializing in Computer Vision, AI, and Edge Computing.</p>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">ABOUT</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        A committed, passionate, and talented engineer with technical expertise in 
-                        <strong>Computer Vision, Artificial Intelligence, Machine Learning, and Deep Learning</strong>. 
-                        Equipped with the capacity to lead and collaborate with others in a team.
-                    </p>
-                    <p>
-                        My expertise lies in developing real-time vision systems, implementing neural networks 
-                        on resource-constrained devices, and optimizing AI models for edge computing. I'm 
-                        passionate about transforming innovative ideas into practical, intelligent embedded systems.
-                    </p>
-                    <div class="social-links-about">
-                        <a href="https://www.linkedin.com/in/m-h-jayasuriya" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/menuka400" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">View Output <i class="fas fa-arrow-right"></i></a>
+                        <div class="social-links-hero">
+                            <a href="https://github.com/menuka400" target="_blank" title="GitHub"><i
+                                    class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/m-h-jayasuriya" target="_blank" title="LinkedIn"><i
+                                    class="fab fa-linkedin"></i></a>
+                        </div>
                     </div>
                 </div>
-                <div class="about-image">
+                <div class="hero-visual reveal-up">
+                    <div class="tech-grid">
+                        <div class="pipeline-stage">
+                            <div class="pipeline-icon"><i class="fas fa-satellite-dish"></i></div>
+                            <span class="pipeline-label">SENSOR</span>
+                        </div>
+                        <div class="pipeline-trace"><span class="pulse"></span></div>
+                        <div class="pipeline-stage">
+                            <div class="pipeline-icon"><i class="fas fa-brain"></i></div>
+                            <span class="pipeline-label">MODEL</span>
+                        </div>
+                        <div class="pipeline-trace"><span class="pulse pulse-delay"></span></div>
+                        <div class="pipeline-stage">
+                            <div class="pipeline-icon"><i class="fas fa-bolt"></i></div>
+                            <span class="pipeline-label">ACTUATE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about section-padding">
+            <div class="container about-grid">
+                <div class="about-image reveal-up">
                     <img src="Image.PNG" alt="Professional Photo">
+                    <div class="image-accent"></div>
+                </div>
+                <div class="about-text reveal-up">
+                    <h2 class="section-title">// ABOUT</h2>
+                    <p class="lead">Developing real-time vision systems, implementing neural networks on
+                        resource-constrained devices, and optimizing AI models for edge computing.</p>
+                    <p>A committed, passionate, and talented engineer with technical expertise in Computer Vision,
+                        Artificial Intelligence, Machine Learning, and Deep Learning. Equipped with the capacity to lead
+                        and collaborate in high-performance teams, transforming innovative ideas into practical,
+                        intelligent embedded systems.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Education Section -->
-    <section id="education" class="education">
-        <div class="container">
-            <h2 class="section-title">EDUCATION</h2>
-            <div class="education-grid">
-                <div class="education-card" style="background-image: url('SLTC.jpeg');">
-                    <div class="education-overlay"></div>
-                    <div class="education-content">
-                        <h3>BSc (Hons) in Data Science</h3>
-                        <p class="institution">SLTC University</p>
-                        <p class="year">2021 - 2025</p>
-                        <p class="description">Specialized in Embedded Systems, AI, and Computer Vision</p>
+        <section id="experience" class="experience section-padding">
+            <div class="container experience-grid">
+                <div class="experience-col reveal-up">
+                    <h2 class="section-title">// EXPERIENCE</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-meta">
+                                <span class="timeline-date">6 Months</span>
+                                <span class="timeline-company">Spera Labs</span>
+                            </div>
+                            <h3 class="timeline-role">AI Engineering Intern</h3>
+                            <ul class="timeline-tasks">
+                                <li>Specialized in AI-driven solutions: Speech AI, NLP, and AI Agents</li>
+                                <li>Developed Face & Voice Recognition, 3D Face Reconstruction systems</li>
+                                <li>Implemented AI Image Generation and Low-Quality Image Enhancement</li>
+                                <li>Created intelligent Conversational AI chatbots with memory</li>
+                                <li>Optimized Large-Scale Information Retrieval systems</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="education-card" style="background-image: url('esoft.jpg');">
-                    <div class="education-overlay"></div>
-                    <div class="education-content">
-                        <h3>Professional Diplomas</h3>
-                        <p class="institution">ESOFT Metro Campus</p>
-                        <p class="year">2017 - 2018</p>
-                        <p class="description">Diploma in IT & Diploma in English</p>
-                    </div>
-                </div>
-                <div class="education-card" style="background-image: url('Ananda.png');">
-                    <div class="education-overlay"></div>
-                    <div class="education-content">
-                        <h3>Complete School Education</h3>
-                        <p class="institution">Ananda College</p>
-                        <p class="year">Grade 1 - 13 | O/L & A/L</p>
-                        <p class="description">Engineering Technology, Science for Technology, Information and Communication Technology</p>
+
+                <div class="education-col reveal-up">
+                    <h2 class="section-title">// EDUCATION</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-meta">
+                                <span class="timeline-date">2021 - 2025</span>
+                                <span class="timeline-company">SLTC University</span>
+                            </div>
+                            <h3 class="timeline-role">BSc (Hons) in Data Science</h3>
+                            <p>Specialized in Embedded Systems, AI, and Computer Vision</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-meta">
+                                <span class="timeline-date">2017 - 2018</span>
+                                <span class="timeline-company">ESOFT Metro Campus</span>
+                            </div>
+                            <h3 class="timeline-role">Professional Diplomas</h3>
+                            <p>Diploma in IT & Diploma in English</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Work Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">WORK EXPERIENCE</h2>
-            <div class="experience-card">
-                <div class="experience-header" style="background-image: url('Spera.jpg');">
-                    <div class="experience-header-overlay"></div>
-                    <div class="experience-header-content">
-                        <h3>Spera Labs</h3>
-                        <h4>AI Engineering Intern</h4>
-                        <p class="duration">6 Months Internship</p>
-                    </div>
-                </div>
-                <div class="experience-body">
-                    <ul class="responsibilities">
-                        <li>Specialized in AI-driven solutions: Speech AI, NLP, and AI Agents</li>
-                        <li>Developed Face & Voice Recognition, 3D Face Reconstruction systems</li>
-                        <li>Implemented AI Image Generation and Low-Quality Image Enhancement</li>
-                        <li>Created intelligent Conversational AI chatbots with memory</li>
-                        <li>Optimized Large-Scale Information Retrieval systems</li>
-                    </ul>
-                    <a href="https://speralabs.com/" target="_blank" class="visit-link">VISIT SITE</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">TECHNICAL PROFICIENCY</h2>
-            <div class="skills-grid">
-                <!-- AI/ML/DL Skills -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <i class="fas fa-robot"></i>
-                        <h3>AI, ML & Embedded Computer Vision</h3>
-                    </div>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span>AI, Machine Learning & Deep Learning (Embedded Focus)</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Embedded Computer Vision Systems</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 94%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>YOLO-Based Real-Time Object, Face & Action Detection</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 93%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Image Acquisition (USB, CSI, ESP32-CAM)</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Vision Model Optimization for Low-Power Devices</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 92%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>FPS vs Accuracy Trade-off Analysis</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Camera Pipeline Optimization for Low Latency</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 91%"></div>
-                            </div>
-                        </div>
-                    </div>
+        <section id="skills" class="skills section-padding">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <h2 class="section-title">// CORE CAPABILITIES</h2>
+                    <p class="section-subtitle">Technical stack & proficiencies</p>
                 </div>
 
-                <!-- Computer Vision -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <i class="fas fa-camera"></i>
-                        <h3>Computer Vision</h3>
-                    </div>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span>Image Acquisition (USB / CSI / ESP32-CAM)</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Model Quantization (INT8 / FP16)</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 92%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Memory & Compute Optimization for Vision Models</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>FPS vs Accuracy Trade-off Analysis</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 88%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Camera Pipeline Optimization for Low Latency</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 89%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div class="skills-grid reveal-up">
 
-                <!-- Embedded Systems -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <i class="fas fa-cogs"></i>
-                        <h3>Embedded Systems</h3>
-                    </div>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span>Embedded C/C++ on ESP32 & Arduino</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Real-Time Control Using Interrupts & Timers</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Sensor, Motor & Relay Interfacing</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 93%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Power Regulation, Fuse Protection & Safety Design</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 88%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Embedded AI System Integration</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 94%"></div>
-                            </div>
+                    <div class="skill-group">
+                        <h3><i class="fas fa-microchip"></i> Edge AI & Vision</h3>
+                        <div class="skill-tags">
+                            <span>TensorFlow Lite (Micro)</span>
+                            <span>Model Quantization (INT8/FP16)</span>
+                            <span>PyTorch</span>
+                            <span>ONNX</span>
+                            <span>YOLO (Object/Face/Action)</span>
+                            <span>Memory & Compute Optimization</span>
+                            <span>Camera Pipeline (Low Latency)</span>
+                            <span>Image Acquisition (CSI/USB/ESP32-CAM)</span>
                         </div>
                     </div>
-                </div>
 
-                <!-- Edge AI & Model Deployment -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <i class="fas fa-microchip"></i>
-                        <h3>Edge AI & Model Deployment</h3>
-                    </div>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span>Edge AI & TinyML Deployment</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 93%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>AI Model Deployment on ESP32 & Raspberry Pi</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>TensorFlow Lite & TensorFlow Lite Micro</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 92%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>PyTorch (Model Training)</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>ONNX-Based Model Conversion</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 88%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Model Quantization & Optimization (INT8 / FP16)</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 91%"></div>
-                            </div>
+                    <div class="skill-group">
+                        <h3><i class="fas fa-cogs"></i> Embedded Systems</h3>
+                        <div class="skill-tags">
+                            <span>C/C++ (ESP32, Arduino)</span>
+                            <span>RTOS & Interrupts</span>
+                            <span>Sensor/Motor Interfacing</span>
+                            <span>Power Regulation & Safety</span>
+                            <span>Hardware Assembly</span>
+                            <span>Panel Wiring</span>
                         </div>
                     </div>
-                </div>
 
-                <!-- Communication Protocols -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <i class="fas fa-network-wired"></i>
-                        <h3>Communication Protocols</h3>
-                    </div>
-                    <div class="skill-items">
-                        <div class="skill-item">
+                    <div class="skill-group">
+                        <h3><i class="fas fa-network-wired"></i> Connectivity</h3>
+                        <div class="skill-tags">
                             <span>UART, I2C, SPI, PWM</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 93%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Wi-Fi & TCP/IP Networking</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 91%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>HTTP/HTTPS & Secure MQTT (MQTTS)</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Cellular Communication (2G / 3G / 4G)</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 88%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>LoRa / LoRaWAN</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Camera & Peripheral Interfaces</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 89%"></div>
-                            </div>
+                            <span>TCP/IP & Wi-Fi</span>
+                            <span>HTTP/HTTPS</span>
+                            <span>Secure MQTT (MQTTS)</span>
+                            <span>Cellular (2G/3G/4G)</span>
+                            <span>LoRaWAN</span>
                         </div>
                     </div>
-                </div>
 
-                <!-- Hardware & Installation -->
-                <div class="skill-category">
-                    <div class="category-header">
-                        <i class="fas fa-tools"></i>
-                        <h3>Hardware & Installation</h3>
-                    </div>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span>Embedded Hardware Assembly & System Integration</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Panel Wiring, Cable Management & Electrical Safety</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 88%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Power Distribution, Fuses & Grounding</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 87%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>Sensor & Camera Installation</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 92%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span>System Testing, Commissioning & Maintenance</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 89%"></div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Certifications Section -->
-    <section id="certifications" class="certifications">
-        <div class="container">
-            <h2 class="section-title">CERTIFICATIONS</h2>
-            <div class="certifications-grid">
-                <div class="certification-card" onclick="openCertificate('Fundamentals of Robotics & Industrial Automation.pdf')" style="cursor: pointer;">
-                    <div class="cert-image cert-preview">
-                        <embed src="Fundamentals of Robotics & Industrial Automation.pdf#page=1" type="application/pdf" />
-                        <div class="cert-overlay">
-                            <i class="fas fa-search-plus"></i>
-                            <p>Click to View Full Certificate</p>
-                        </div>
-                    </div>
-                    <h3>Fundamentals of Robotics & Industrial Automation</h3>
-                    <p class="institution">Coursera / L&T Edutech</p>
-                    <p class="year">2025</p>
-                </div>
-                <div class="certification-card" onclick="openCertificate('Introduction to internet of things.pdf')" style="cursor: pointer;">
-                    <div class="cert-image cert-preview">
-                        <embed src="Introduction to internet of things.pdf#page=1" type="application/pdf" />
-                        <div class="cert-overlay">
-                            <i class="fas fa-search-plus"></i>
-                            <p>Click to View Full Certificate</p>
-                        </div>
-                    </div>
-                    <h3>Introduction to Internet of Things</h3>
-                    <p class="institution">Cisco Networking Academy</p>
-                    <p class="year">2025</p>
-                </div>
-                <div class="certification-card" onclick="openCertificate('Linear Algebra for Machine Learning and Data Science.pdf')" style="cursor: pointer;">
-                    <div class="cert-image cert-preview">
-                        <embed src="Linear Algebra for Machine Learning and Data Science.pdf#page=1" type="application/pdf" />
-                        <div class="cert-overlay">
-                            <i class="fas fa-search-plus"></i>
-                            <p>Click to View Full Certificate</p>
-                        </div>
-                    </div>
-                    <h3>Linear Algebra for Machine Learning and Data Science</h3>
-                    <p class="institution">Coursera / DeepLearning.AI</p>
-                    <p class="year">2023</p>
-                </div>
-                <div class="certification-card" onclick="openCertificate('Process Data from Dirty to Clean.pdf')" style="cursor: pointer;">
-                    <div class="cert-image cert-preview">
-                        <embed src="Process Data from Dirty to Clean.pdf#page=1" type="application/pdf" />
-                        <div class="cert-overlay">
-                            <i class="fas fa-search-plus"></i>
-                            <p>Click to View Full Certificate</p>
-                        </div>
-                    </div>
-                    <h3>Process Data from Dirty to Clean</h3>
-                    <p class="institution">Coursera / Google</p>
-                    <p class="year">2022</p>
-                </div>
-                <div class="certification-card" onclick="openCertificate('Advanced Algorithms and Complexity.pdf')" style="cursor: pointer;">
-                    <div class="cert-image cert-preview">
-                        <embed src="Advanced Algorithms and Complexity.pdf#page=1" type="application/pdf" />
-                        <div class="cert-overlay">
-                            <i class="fas fa-search-plus"></i>
-                            <p>Click to View Full Certificate</p>
-                        </div>
-                    </div>
-                    <h3>Advanced Algorithms and Complexity</h3>
-                    <p class="institution">Coursera / UC San Diego</p>
-                    <p class="year">2022</p>
-                </div>
-                <div class="certification-card" onclick="openCertificate('Capstone Applying Project Management in the Real World.pdf')" style="cursor: pointer;">
-                    <div class="cert-image cert-preview">
-                        <embed src="Capstone Applying Project Management in the Real World.pdf#page=1" type="application/pdf" />
-                        <div class="cert-overlay">
-                            <i class="fas fa-search-plus"></i>
-                            <p>Click to View Full Certificate</p>
-                        </div>
-                    </div>
-                    <h3>Capstone: Applying Project Management in the Real World</h3>
-                    <p class="institution">Coursera / Google</p>
-                    <p class="year">2022</p>
-                </div>
-                <div class="certification-card" onclick="openCertificate('Google Project Management.pdf')" style="cursor: pointer;">
-                    <div class="cert-image cert-preview">
-                        <embed src="Google Project Management.pdf#page=1" type="application/pdf" />
-                        <div class="cert-overlay">
-                            <i class="fas fa-search-plus"></i>
-                            <p>Click to View Full Certificate</p>
-                        </div>
-                    </div>
-                    <h3>Google Project Management</h3>
-                    <p class="institution">Coursera / Google</p>
-                    <p class="year">2022</p>
-                </div>
-                <div class="certification-card" onclick="openCertificate('Introduction to Data Science.pdf')" style="cursor: pointer;">
-                    <div class="cert-image cert-preview">
-                        <embed src="Introduction to Data Science.pdf#page=1" type="application/pdf" />
-                        <div class="cert-overlay">
-                            <i class="fas fa-search-plus"></i>
-                            <p>Click to View Full Certificate</p>
-                        </div>
-                    </div>
-                    <h3>Introduction to Data Science</h3>
-                    <p class="institution">Coursera / IBM</p>
-                    <p class="year">2022</p>
+        <!-- Horizontal scroll projects -->
+        <section id="projects" class="projects section-padding">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <h2 class="section-title">// PROJECTS</h2>
+                    <p class="section-subtitle">Selected output & engineering solutions</p>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">PROJECTS</h2>
-            <div class="projects-grid">
-                <div class="project-card" onclick="window.open('https://menuka400.github.io/Design-and-Development-of-an-Autonomous-Smart-Firefighting-Robot-for-Sri-Lanka/', '_blank')">
-                    <div class="project-image">
-                        <i class="fas fa-fire-extinguisher"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Autonomous Smart Firefighting Robot for Sri Lanka <span style="color: #00d4ff; font-size: 0.85rem;">(Ongoing - 60% Complete)</span></h3>
-                        <p>Developing an autonomous firefighting robot that can move to different locations, detect fire automatically, and spray water without human intervention. All electronics and electrical system design developed through self-learning, including circuit design, power management, and system integration. Future phases will include camera-based navigation and vision systems for improved fire localization and autonomous movement.</p>
-                        <div class="project-tags">
-                            <span class="tag">Robotics</span>
-                            <span class="tag">Fire Detection</span>
-                            <span class="tag">Autonomous Systems</span>
-                            <span class="tag">Embedded Systems</span>
-                            <span class="tag">IoT</span>
-                        </div>
-                        <a href="https://menuka400.github.io/Design-and-Development-of-an-Autonomous-Smart-Firefighting-Robot-for-Sri-Lanka/" target="_blank" style="color: #00d4ff; text-decoration: none; font-size: 0.9rem; margin-top: 0.5rem; display: inline-block;">
-                            <i class="fas fa-external-link-alt"></i> View Project Details
-                        </a>
+            <div class="projects-scroller-wrap">
+                <button class="project-arrow project-arrow-left" aria-label="Previous project" type="button">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div class="projects-scroll-container reveal-up">
+                    <div class="projects-track">
+
+                        <!-- Project 1 -->
+                        <article class="project-panel is-active"
+                            onclick="window.open('https://github.com/menuka400/Agentic-RAG-Voice-Assistant', '_blank')">
+                            <div class="project-panel-inner">
+                                <div class="project-num">001</div>
+                                <h3 class="project-name">Agentic RAG Voice Assistant</h3>
+                                <p class="project-desc">Intelligent voice-driven assistant combining Agentic RAG with
+                                    speech recognition. Bridges LLMs with real-world knowledge bases.</p>
+                                <div class="project-tech">
+                                    <span>Agentic AI</span> <span>RAG</span> <span>NLP</span> <span>LLM</span>
+                                </div>
+                                <div class="project-link">
+                                    <span>View Repository</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project 2 -->
+                        <article class="project-panel"
+                            onclick="window.open('https://github.com/menuka400/LoRA_QLoRA_Comparative_Fine_Tuning_Home_Health_Assistant', '_blank')">
+                            <div class="project-panel-inner">
+                                <div class="project-num">002</div>
+                                <h3 class="project-name">LoRA & QLoRA Fine-Tuning</h3>
+                                <p class="project-desc">Comparative study fine-tuning large language models for a home
+                                    health assistant on resource-constrained hardware.</p>
+                                <div class="project-tech">
+                                    <span>LoRA/QLoRA</span> <span>Healthcare AI</span> <span>Fine-Tuning</span>
+                                </div>
+                                <div class="project-link">
+                                    <span>View Repository</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project 3 -->
+                        <article class="project-panel"
+                            onclick="window.open('https://github.com/menuka400/An-Intelligent-Security-System-for-Real-Time-Crime-Detection-and-Emergency-Response-in-Sri-Lanka.git', '_blank')">
+                            <div class="project-panel-inner">
+                                <div class="project-num">003</div>
+                                <h3 class="project-name">CRIMEGUARD System</h3>
+                                <p class="project-desc">Real-time surveillance integrating ArcFace, custom YOLOv11 for
+                                    weapon detection, and a multi-agent LangGraph chatbot with ESP32 alerts.</p>
+                                <div class="project-tech">
+                                    <span>YOLOv11</span> <span>ArcFace</span> <span>ESP32</span> <span>LangGraph</span>
+                                </div>
+                                <div class="project-link">
+                                    <span>View Repository</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project 4 -->
+                        <article class="project-panel"
+                            onclick="window.open('https://menuka400.github.io/Design-and-Development-of-an-Autonomous-Smart-Firefighting-Robot-for-Sri-Lanka/', '_blank')">
+                            <div class="project-panel-inner">
+                                <div class="project-num">004</div>
+                                <h3 class="project-name">Autonomous Firefighting Robot</h3>
+                                <p class="project-desc">Custom-built autonomous robot for fire detection and
+                                    suppression. Complete electrical, electronic, and logic design.</p>
+                                <div class="project-tech">
+                                    <span>Robotics</span> <span>Embedded Systems</span> <span>Sensors</span>
+                                </div>
+                                <div class="project-link">
+                                    <span>View Details</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project 5 -->
+                        <article class="project-panel"
+                            onclick="window.open('https://github.com/menuka400/Driver-Safety-Guard-2.0', '_blank')">
+                            <div class="project-panel-inner">
+                                <div class="project-num">005</div>
+                                <h3 class="project-name">Driver Safety Guard 2.0</h3>
+                                <p class="project-desc">IoT driver safety system with YOLO11x phone detection &
+                                    MediaPipe drowsiness monitoring running at 30+ FPS, linked to ESP32.</p>
+                                <div class="project-tech">
+                                    <span>IoT</span> <span>MediaPipe</span> <span>YOLO11x</span> <span>Computer
+                                        Vision</span>
+                                </div>
+                                <div class="project-link">
+                                    <span>View Repository</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project 6 -->
+                        <article class="project-panel"
+                            onclick="window.open('https://github.com/menuka400/Real-Time-Gender-Classification-Using-Deep-Metric-Learning-and-Vector-Database-Retrieval', '_blank')">
+                            <div class="project-panel-inner">
+                                <div class="project-num">006</div>
+                                <h3 class="project-name">Deep Metric Classification</h3>
+                                <p class="project-desc">Hybrid ensemble face system using YOLOv11 and ArcFace. Real-time
+                                    20+ FPS performance on 200k FAISS indexed embeddings.</p>
+                                <div class="project-tech">
+                                    <span>Deep Learning</span> <span>FAISS</span> <span>Vector DB</span>
+                                </div>
+                                <div class="project-link">
+                                    <span>View Repository</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project 7 -->
+                        <article class="project-panel"
+                            onclick="window.open('https://github.com/menuka400/vision-guided-smart-car-system', '_blank')">
+                            <div class="project-panel-inner">
+                                <div class="project-num">007</div>
+                                <h3 class="project-name">Vision Guided Smart Car</h3>
+                                <p class="project-desc">Autonomous smart car controlled by hand gestures with real-time
+                                    people tracking, combining YOLO11x-pose estimation, OpenCV, and ESP32 for
+                                    human-robot interaction.</p>
+                                <div class="project-tech">
+                                    <span>YOLO11x-pose</span> <span>OpenCV</span> <span>ESP32</span> <span>Gesture
+                                        Recognition</span>
+                                </div>
+                                <div class="project-link">
+                                    <span>View Repository</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project 8 -->
+                        <article class="project-panel"
+                            onclick="window.open('https://github.com/menuka400/Smart-Fan-Control-Using-Image-Processing-2.0?tab=readme-ov-file', '_blank')">
+                            <div class="project-panel-inner">
+                                <div class="project-num">008</div>
+                                <h3 class="project-name">Smart Fan Control</h3>
+                                <p class="project-desc">Gesture-controlled fan system using a neural network trained
+                                    with Teachable Machine, recognizing five hand gestures to control power and speed.
+                                </p>
+                                <div class="project-tech">
+                                    <span>Machine Learning</span> <span>Gesture Recognition</span> <span>Teachable
+                                        Machine</span> <span>Smart Home</span>
+                                </div>
+                                <div class="project-link">
+                                    <span>View Repository</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project 9 -->
+                        <article class="project-panel"
+                            onclick="window.open('https://github.com/menuka400/face-recognition-system-using-aiven-PostgreSQL', '_blank')">
+                            <div class="project-panel-inner">
+                                <div class="project-num">009</div>
+                                <h3 class="project-name">Face Recognition + PostgreSQL</h3>
+                                <p class="project-desc">Real-time face detection, registration, and recognition system
+                                    storing embeddings in PostgreSQL for scalable identity management and fast
+                                    retrieval.</p>
+                                <div class="project-tech">
+                                    <span>OpenCV</span> <span>PostgreSQL</span> <span>Face Recognition</span>
+                                    <span>imgbeddings</span>
+                                </div>
+                                <div class="project-link">
+                                    <span>View Repository</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project 10 -->
+                        <article class="project-panel"
+                            onclick="window.open('https://github.com/menuka400/Face-Recognition-System-using-MTCNN-and-FaceNet', '_blank')">
+                            <div class="project-panel-inner">
+                                <div class="project-num">010</div>
+                                <h3 class="project-name">Face Recognition: MTCNN + FaceNet</h3>
+                                <p class="project-desc">Robust real-time identity verification system built on MTCNN
+                                    detection and FaceNet recognition, supporting webcams through Intel RealSense D435i
+                                    depth cameras.</p>
+                                <div class="project-tech">
+                                    <span>MTCNN</span> <span>FaceNet</span> <span>Real-Time</span> <span>Intel
+                                        RealSense</span>
+                                </div>
+                                <div class="project-link">
+                                    <span>View Repository</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project 11 -->
+                        <article class="project-panel"
+                            onclick="window.open('https://github.com/menuka400/Breast-Cancer', '_blank')">
+                            <div class="project-panel-inner">
+                                <div class="project-num">011</div>
+                                <h3 class="project-name">Breast Cancer Detection</h3>
+                                <p class="project-desc">Deep learning system using YOLOv8 to identify potential
+                                    cancerous regions in medical images, assisting early detection through automated
+                                    screening.</p>
+                                <div class="project-tech">
+                                    <span>YOLOv8</span> <span>Healthcare AI</span> <span>Medical Imaging</span>
+                                    <span>Computer Vision</span>
+                                </div>
+                                <div class="project-link">
+                                    <span>View Repository</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project 12 -->
+                        <article class="project-panel"
+                            onclick="window.open('https://github.com/menuka400/Sri-Lankan-coin-detection-system', '_blank')">
+                            <div class="project-panel-inner">
+                                <div class="project-num">012</div>
+                                <h3 class="project-name">Sri Lankan Coin Detection</h3>
+                                <p class="project-desc">YOLOv8-based currency recognition system identifying Sri Lankan
+                                    coin denominations from Rs.1 to Rs.5000, suited for vending and retail automation.
+                                </p>
+                                <div class="project-tech">
+                                    <span>YOLOv8</span> <span>Object Detection</span> <span>Currency Recognition</span>
+                                    <span>Automation</span>
+                                </div>
+                                <div class="project-link">
+                                    <span>View Repository</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project 13 -->
+                        <article class="project-panel"
+                            onclick="window.open('https://github.com/menuka400/Detective-Lens', '_blank')">
+                            <div class="project-panel-inner">
+                                <div class="project-num">013</div>
+                                <h3 class="project-name">Detective Lens</h3>
+                                <p class="project-desc">Full-stack web application for object detection powered by
+                                    YOLOv8 with a Flask backend, supporting image upload, processing, and batch
+                                    analysis.</p>
+                                <div class="project-tech">
+                                    <span>YOLOv8</span> <span>Flask</span> <span>Web Application</span> <span>Object
+                                        Detection</span>
+                                </div>
+                                <div class="project-link">
+                                    <span>View Repository</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project 14 -->
+                        <article class="project-panel"
+                            onclick="window.open('https://github.com/menuka400/apple-detection-system-using-yolov8', '_blank')">
+                            <div class="project-panel-inner">
+                                <div class="project-num">014</div>
+                                <h3 class="project-name">Apple Detection (YOLOv8x-seg)</h3>
+                                <p class="project-desc">Image segmentation system trained on 1,000 Roboflow-annotated
+                                    images, delivering precise real-time apple detection masks for smart agriculture.
+                                </p>
+                                <div class="project-tech">
+                                    <span>YOLOv8x-seg</span> <span>Segmentation</span> <span>Roboflow</span>
+                                    <span>Agriculture AI</span>
+                                </div>
+                                <div class="project-link">
+                                    <span>View Repository</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Keep spacer for scroll end -->
+                        <div class="scroll-spacer"></div>
                     </div>
                 </div>
 
-                <div class="project-card" onclick="window.open('https://github.com/menuka400/Real-Time-Gender-Classification-Using-Deep-Metric-Learning-and-Vector-Database-Retrieval', '_blank')">
-                    <div class="project-image">
-                        <i class="fas fa-user-check"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Real-Time Gender Classification Using Deep Metric Learning</h3>
-                        <p>A hybrid ensemble system combining YOLOv11 for face detection, ArcFace (ResNet-50) for facial embedding extraction, and dual classification using FAISS k-NN (91.38% accuracy, 97.63% AUC) and MLP neural network (90.05% accuracy). Achieved real-time performance at 20+ FPS on GPU hardware with 200,046 face embeddings, demonstrating effective deep metric learning with vector database indexing.</p>
-                        <div class="project-tags">
-                            <span class="tag">Deep Learning</span>
-                            <span class="tag">YOLOv11</span>
-                            <span class="tag">ArcFace</span>
-                            <span class="tag">FAISS</span>
-                            <span class="tag">Real-Time Processing</span>
-                        </div>
-                        <a href="https://github.com/menuka400/Real-Time-Gender-Classification-Using-Deep-Metric-Learning-and-Vector-Database-Retrieval" target="_blank" style="color: #00d4ff; text-decoration: none; font-size: 0.9rem; margin-top: 0.5rem; display: inline-block;">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card" onclick="window.open('https://github.com/menuka400/An-Intelligent-Security-System-for-Real-Time-Crime-Detection-and-Emergency-Response-in-Sri-Lanka.git', '_blank')">
-                    <div class="project-image">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>CRIMEGUARD: AI Security System for Crime Detection <span style="color: #ff006e; font-size: 0.85rem;">(Final Year Project)</span></h3>
-                        <p>Intelligent surveillance system integrating InsightFace ArcFace for face recognition (95% accuracy), custom YOLOv11 for weapon detection (88% precision, <480ms latency), and multi-agent chatbot (LangGraph + GPT-4o-mini + Gemini) supporting Sinhala, Tamil, and English. Features ESP32-based physical alerts and Twilio communication for real-time emergency response in Sri Lankan security applications.</p>
-                        <div class="project-tags">
-                            <span class="tag">YOLOv11</span>
-                            <span class="tag">ArcFace</span>
-                            <span class="tag">LangGraph</span>
-                            <span class="tag">ESP32</span>
-                            <span class="tag">Real-Time AI</span>
-                        </div>
-                        <a href="https://github.com/menuka400/An-Intelligent-Security-System-for-Real-Time-Crime-Detection-and-Emergency-Response-in-Sri-Lanka.git" target="_blank" style="color: #00d4ff; text-decoration: none; font-size: 0.9rem; margin-top: 0.5rem; display: inline-block;">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card" onclick="window.open('https://github.com/menuka400/Driver-Safety-Guard-2.0', '_blank')">
-                    <div class="project-image">
-                        <i class="fas fa-car-crash"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Driver Safety Guard 2.0: Real-Time IoT Safety Monitoring</h3>
-                        <p>AI-powered driver safety system combining YOLO11x for phone detection (94.2% accuracy) and MediaPipe for drowsiness monitoring, achieving 30+ FPS real-time processing. Features ESP32-based alerts (RGB LEDs, audio warnings), Blynk mobile app integration, and GPU optimization. Collaborative project demonstrating practical AI application for proactive road safety in Sri Lankan context.</p>
-                        <div class="project-tags">
-                            <span class="tag">YOLO11x</span>
-                            <span class="tag">MediaPipe</span>
-                            <span class="tag">ESP32</span>
-                            <span class="tag">IoT</span>
-                            <span class="tag">Computer Vision</span>
-                        </div>
-                        <a href="https://github.com/menuka400/Driver-Safety-Guard-2.0" target="_blank" style="color: #00d4ff; text-decoration: none; font-size: 0.9rem; margin-top: 0.5rem; display: inline-block;">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card" onclick="window.open('https://github.com/menuka400/vision-guided-smart-car-system', '_blank')">
-                    <div class="project-image">
-                        <i class="fas fa-hand-rock"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Vision Guided Smart Car with AI Hand Gesture Control</h3>
-                        <p>Intelligent autonomous car system responding to hand gestures with active people tracking using advanced computer vision. Combines YOLO11x-pose estimation for gesture recognition, OpenCV for real-time processing, and ESP32 microcontroller for seamless human-robot interaction and vehicle control.</p>
-                        <div class="project-tags">
-                            <span class="tag">YOLO11x-pose</span>
-                            <span class="tag">OpenCV</span>
-                            <span class="tag">ESP32</span>
-                            <span class="tag">Gesture Recognition</span>
-                            <span class="tag">Autonomous Systems</span>
-                        </div>
-                        <a href="https://github.com/menuka400/vision-guided-smart-car-system" target="_blank" style="color: #00d4ff; text-decoration: none; font-size: 0.9rem; margin-top: 0.5rem; display: inline-block;">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card" onclick="window.open('https://github.com/menuka400/Smart-Fan-Control-Using-Image-Processing-2.0?tab=readme-ov-file', '_blank')">
-                    <div class="project-image">
-                        <i class="fas fa-fan"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Smart Fan Control Using Image Processing</h3>
-                        <p>AI-powered gesture recognition system using neural networks trained with Google's Teachable Machine to control fan operations. Recognizes five distinct hand gestures for turning the fan on/off, increasing/decreasing speed, and setting specific speed levels. Demonstrates practical application of machine learning for smart home automation and gesture-based control systems.</p>
-                        <div class="project-tags">
-                            <span class="tag">Machine Learning</span>
-                            <span class="tag">Gesture Recognition</span>
-                            <span class="tag">Teachable Machine</span>
-                            <span class="tag">Image Processing</span>
-                            <span class="tag">Smart Home</span>
-                        </div>
-                        <a href="https://github.com/menuka400/Smart-Fan-Control-Using-Image-Processing-2.0?tab=readme-ov-file" target="_blank" style="color: #00d4ff; text-decoration: none; font-size: 0.9rem; margin-top: 0.5rem; display: inline-block;">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card" onclick="window.open('https://github.com/menuka400/face-recognition-system-using-aiven-PostgreSQL', '_blank')">
-                    <div class="project-image">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Face Recognition System Using Aiven PostgreSQL</h3>
-                        <p>Powerful and efficient face recognition system built with OpenCV, imgbeddings, and PostgreSQL for real-time face detection, registration, and recognition. Features database storage for embeddings, enabling scalable identity management and fast retrieval for real-time applications.</p>
-                        <div class="project-tags">
-                            <span class="tag">OpenCV</span>
-                            <span class="tag">PostgreSQL</span>
-                            <span class="tag">Face Recognition</span>
-                            <span class="tag">imgbeddings</span>
-                            <span class="tag">Database</span>
-                        </div>
-                        <a href="https://github.com/menuka400/face-recognition-system-using-aiven-PostgreSQL" target="_blank" style="color: #00d4ff; text-decoration: none; font-size: 0.9rem; margin-top: 0.5rem; display: inline-block;">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card" onclick="window.open('https://github.com/menuka400/Face-Recognition-System-using-MTCNN-and-FaceNet', '_blank')">
-                    <div class="project-image">
-                        <i class="fas fa-user-lock"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Face Recognition System Using MTCNN and FaceNet</h3>
-                        <p>Comprehensive face recognition system implementing cutting-edge MTCNN face detection and FaceNet recognition algorithms for robust, real-time identity verification. Supports multiple hardware configurations from standard webcams to Intel RealSense D435i depth cameras, suitable for both basic and advanced security applications.</p>
-                        <div class="project-tags">
-                            <span class="tag">MTCNN</span>
-                            <span class="tag">FaceNet</span>
-                            <span class="tag">Real-Time</span>
-                            <span class="tag">Intel RealSense</span>
-                            <span class="tag">Security</span>
-                        </div>
-                        <a href="https://github.com/menuka400/Face-Recognition-System-using-MTCNN-and-FaceNet" target="_blank" style="color: #00d4ff; text-decoration: none; font-size: 0.9rem; margin-top: 0.5rem; display: inline-block;">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card" onclick="window.open('https://github.com/menuka400/Breast-Cancer', '_blank')">
-                    <div class="project-image">
-                        <i class="fas fa-heartbeat"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Advancing AI in Healthcare: Breast Cancer Detection with YOLOv8</h3>
-                        <p>Deep learning-powered breast cancer detection system using YOLOv8 object detection model to identify potential cancerous regions in medical images. Leverages computer vision to assist in early detection, significantly improving survival rates through AI-assisted medical image analysis and automated screening.</p>
-                        <div class="project-tags">
-                            <span class="tag">YOLOv8</span>
-                            <span class="tag">Healthcare AI</span>
-                            <span class="tag">Medical Imaging</span>
-                            <span class="tag">Cancer Detection</span>
-                            <span class="tag">Computer Vision</span>
-                        </div>
-                        <a href="https://github.com/menuka400/Breast-Cancer" target="_blank" style="color: #00d4ff; text-decoration: none; font-size: 0.9rem; margin-top: 0.5rem; display: inline-block;">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card" onclick="window.open('https://github.com/menuka400/Sri-Lankan-coin-detection-system', '_blank')">
-                    <div class="project-image">
-                        <i class="fas fa-coins"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Sri Lankan Coin Detection System</h3>
-                        <p>Intelligent coin detection system using YOLOv8 to accurately identify and categorize Sri Lankan currency coins across all denominations (Rs.1 to Rs.5000). Demonstrates practical application of computer vision for automated currency recognition, suitable for vending machines, cash handling systems, and retail automation.</p>
-                        <div class="project-tags">
-                            <span class="tag">YOLOv8</span>
-                            <span class="tag">Object Detection</span>
-                            <span class="tag">Currency Recognition</span>
-                            <span class="tag">Computer Vision</span>
-                            <span class="tag">Automation</span>
-                        </div>
-                        <a href="https://github.com/menuka400/Sri-Lankan-coin-detection-system" target="_blank" style="color: #00d4ff; text-decoration: none; font-size: 0.9rem; margin-top: 0.5rem; display: inline-block;">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card" onclick="window.open('https://github.com/menuka400/Detective-Lens', '_blank')">
-                    <div class="project-image">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Detective Lens</h3>
-                        <p>Web-based object detection application powered by YOLOv8 with Flask backend for image upload and processing. Features organized directory management for results, enabling efficient batch processing and analysis. Demonstrates full-stack integration of deep learning models for accessible computer vision applications.</p>
-                        <div class="project-tags">
-                            <span class="tag">YOLOv8</span>
-                            <span class="tag">Flask</span>
-                            <span class="tag">Web Application</span>
-                            <span class="tag">Object Detection</span>
-                            <span class="tag">Full-Stack</span>
-                        </div>
-                        <a href="https://github.com/menuka400/Detective-Lens" target="_blank" style="color: #00d4ff; text-decoration: none; font-size: 0.9rem; margin-top: 0.5rem; display: inline-block;">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card" onclick="window.open('https://github.com/menuka400/apple-detection-system-using-yolov8', '_blank')">
-                    <div class="project-image">
-                        <i class="fas fa-apple-alt"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Apple Detection System Using YOLOv8x-seg</h3>
-                        <p>Advanced image segmentation system using YOLOv8x-seg trained on 1,000 annotated images via Roboflow over 50 epochs. Achieves accurate real-time apple detection and segmentation with precise object masks. Ideal for smart agriculture applications, quality control, and automated fruit sorting systems.</p>
-                        <div class="project-tags">
-                            <span class="tag">YOLOv8x-seg</span>
-                            <span class="tag">Segmentation</span>
-                            <span class="tag">Roboflow</span>
-                            <span class="tag">Agriculture AI</span>
-                            <span class="tag">Computer Vision</span>
-                        </div>
-                        <a href="https://github.com/menuka400/apple-detection-system-using-yolov8" target="_blank" style="color: #00d4ff; text-decoration: none; font-size: 0.9rem; margin-top: 0.5rem; display: inline-block;">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
-                    </div>
-                </div>
+                <button class="project-arrow project-arrow-right" aria-label="Next project" type="button">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">GET IN TOUCH</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>CONTACT INFO</h3>
-                    <p>I'm always interested in discussing new projects, innovative ideas, or opportunities to be part of cutting-edge embedded AI solutions.</p>
-                    <div class="contact-items">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:menuka400@gmail.com">menuka400@gmail.com</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <a href="tel:+94719576961">+94 71 957 6961</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Colombo, Sri Lanka</span>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://github.com/menuka400" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/m-h-jayasuriya" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://x.com/MenukaJayasuri2" target="_blank" title="X"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.researchgate.net/profile/Menuka-Jayasuriya?ev=hdr_xprf" target="_blank" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
-                    </div>
+        <!-- Certifications & Contact grid -->
+        <section class="section-padding">
+            <div class="container dual-grid">
+
+                <div class="certs-col reveal-up">
+                    <h2 class="section-title">// CERTIFICATIONS</h2>
+                    <ul class="cert-list">
+                        <li>
+                            <span class="cert-name">Fundamentals of Robotics & Industrial Automation</span>
+                            <span class="cert-issuer">Coursera / L&T Edutech (2025)</span>
+                        </li>
+                        <li>
+                            <span class="cert-name">Introduction to Internet of Things</span>
+                            <span class="cert-issuer">Cisco Networking Academy (2025)</span>
+                        </li>
+                        <li>
+                            <span class="cert-name">Linear Algebra for ML & Data Science</span>
+                            <span class="cert-issuer">DeepLearning.AI (2023)</span>
+                        </li>
+                        <li>
+                            <span class="cert-name">Process Data from Dirty to Clean</span>
+                            <span class="cert-issuer">Google (2022)</span>
+                        </li>
+                        <li>
+                            <span class="cert-name">Advanced Algorithms & Complexity</span>
+                            <span class="cert-issuer">UC San Diego (2022)</span>
+                        </li>
+                    </ul>
                 </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                <div id="contact" class="contact-col reveal-up">
+                    <h2 class="section-title">// INITIATE CONTACT</h2>
+
+                    <div class="contact-methods">
+                        <a href="mailto:menuka400@gmail.com" class="contact-link">
+                            <span class="contact-label">EMAIL</span>
+                            <span class="contact-value">menuka400@gmail.com <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                        <a href="tel:+94719576961" class="contact-link">
+                            <span class="contact-label">PHONE</span>
+                            <span class="contact-value">+94 71 957 6961 <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                        <div class="contact-link static">
+                            <span class="contact-label">LOCATION</span>
+                            <span class="contact-value">Colombo, Sri Lanka</span>
                         </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                        <div id="form-status" style="margin-top: 1rem; color: #00d4ff; display: none;"></div>
+                    </div>
+
+                    <form id="contactForm" class="brutalist-form">
+                        <input type="text" id="name" placeholder="IDENTIFIER (NAME)" required>
+                        <input type="email" id="email" placeholder="RETURN ADDRESS (EMAIL)" required>
+                        <textarea id="message" rows="4" placeholder="TRANSMISSION (MESSAGE)" required></textarea>
+                        <button type="submit" class="btn btn-primary btn-block">TRANSMIT <i
+                                class="fas fa-paper-plane"></i></button>
+                        <div id="form-status" class="form-status"></div>
                     </form>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
+            </div>
+        </section>
+
+    </main>
+
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Embedded Systems Engineer Portfolio. All rights reserved.</p>
-            <p>Designed with <i class="fas fa-heart"></i> for AI & Embedded Systems</p>
+        <div class="container footer-flex">
+            <span>&copy; 2026 Menuka Hashen Jayasuriya.</span>
+            <span>Engineered for impact.</span>
         </div>
     </footer>
 
-    <!-- Certificate Modal -->
-    <div id="certificateModal" class="cert-modal">
-        <div class="cert-modal-content">
-            <span class="cert-close" onclick="closeCertificate()">&times;</span>
-            <iframe id="certificateFrame" src="" frameborder="0"></iframe>
-        </div>
-    </div>
-
     <script src="script.js"></script>
 </body>
+
 </html>
