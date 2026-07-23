@@ -1,240 +1,210 @@
-// Dark Mode Toggle
+/**
+ * THE INTELLIGENT MACHINE - JS Logic
+ */
+
+// --- Theme Toggle ---
 const themeToggle = document.getElementById('themeToggle');
 const html = document.documentElement;
-
-// Check for saved theme preference or default to light mode
-const currentTheme = localStorage.getItem('theme') || 'light';
+const currentTheme = localStorage.getItem('theme') || 'dark'; // Default to dark for tech aesthetic
 html.setAttribute('data-theme', currentTheme);
 
-themeToggle.addEventListener('click', () => {
-    const theme = html.getAttribute('data-theme');
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    
-    html.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    
-    // Add animation class
-    themeToggle.style.animation = 'toggleBounce 0.5s ease';
-    setTimeout(() => {
-        themeToggle.style.animation = '';
-    }, 500);
-});
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        const theme = html.getAttribute('data-theme');
+        const newTheme = theme === 'light' ? 'dark' : 'light';
+        html.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+    });
+}
 
-// Mobile Navigation Toggle
+// --- Mobile Navigation ---
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('.nav-links');
-const navLinks = document.querySelectorAll('.nav-links li');
+const navLinks = document.querySelectorAll('.nav-links a');
 
-burger.addEventListener('click', () => {
-    nav.classList.toggle('active');
-    burger.classList.toggle('toggle');
-});
+if (burger) {
+    burger.addEventListener('click', () => {
+        nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+    });
+}
 
-// Close mobile menu when clicking on a link
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
-        nav.classList.remove('active');
-        burger.classList.remove('toggle');
+        if (window.innerWidth <= 768) {
+            nav.style.display = 'none';
+        }
     });
 });
 
-// Smooth Scrolling with Enhanced Animation
+// --- Smooth Scroll ---
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        e.stopPropagation();
-        
         const targetId = this.getAttribute('href');
-        
-        // Skip if it's just "#"
         if (targetId === '#') return;
-        
+
         const target = document.querySelector(targetId);
-        
         if (target) {
-            const navbar = document.querySelector('.navbar');
-            const navbarHeight = navbar ? navbar.offsetHeight : 80;
-            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight - 20;
-            const startPosition = window.pageYOffset;
-            const distance = targetPosition - startPosition;
-            const duration = 800; // 0.8 seconds
-            let start = null;
-            
-            // Custom easing function for smooth animation
-            function easeInOutCubic(t) {
-                return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
-            }
-            
-            function animation(currentTime) {
-                if (start === null) start = currentTime;
-                const timeElapsed = currentTime - start;
-                const progress = Math.min(timeElapsed / duration, 1);
-                const ease = easeInOutCubic(progress);
-                
-                window.scrollTo(0, startPosition + distance * ease);
-                
-                if (timeElapsed < duration) {
-                    requestAnimationFrame(animation);
-                } else {
-                    // Add a subtle highlight effect to the target section
-                    target.style.transition = 'transform 0.3s ease';
-                    target.style.transform = 'scale(1.005)';
-                    setTimeout(() => {
-                        target.style.transform = 'scale(1)';
-                    }, 300);
-                }
-            }
-            
-            requestAnimationFrame(animation);
+            const navbarHeight = document.querySelector('.navbar').offsetHeight;
+            const targetPos = target.getBoundingClientRect().top + window.scrollY - navbarHeight;
+
+            window.scrollTo({
+                top: targetPos,
+                behavior: 'smooth'
+            });
         }
     });
 });
 
-// Skill Bar Animation on Scroll
-const observerOptions = {
-    threshold: 0.5,
-    rootMargin: '0px'
-};
-
-const skillObserver = new IntersectionObserver(function(entries, observer) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const skillBars = entry.target.querySelectorAll('.skill-progress');
-            skillBars.forEach(bar => {
-                const width = bar.style.width;
-                bar.style.width = '0%';
-                setTimeout(() => {
-                    bar.style.width = width;
-                }, 100);
-            });
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
-const skillsSection = document.querySelector('.skills');
-if (skillsSection) {
-    skillObserver.observe(skillsSection);
-}
-
-// Animate elements on scroll
-const fadeInOptions = {
-    threshold: 0.1,
+// --- Intersection Observer for Reveal Animations ---
+const revealOptions = {
+    threshold: 0.15,
     rootMargin: '0px 0px -50px 0px'
 };
 
-const fadeInObserver = new IntersectionObserver(function(entries) {
+const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-            fadeInObserver.unobserve(entry.target);
+            entry.target.classList.add('is-revealed');
+            revealObserver.unobserve(entry.target);
         }
     });
-}, fadeInOptions);
+}, revealOptions);
 
-// Apply fade-in animation to sections
-document.querySelectorAll('section').forEach(section => {
-    if (section.id !== 'home') {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(20px)';
-        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        fadeInObserver.observe(section);
-    }
+document.querySelectorAll('.reveal-up').forEach(el => {
+    revealObserver.observe(el);
 });
 
-// Contact Form Submission
+// --- Projects Navigation (arrows + keyboard + centered highlight) ---
+// Note: page scroll now works normally even when the cursor is over a
+// project card — there is no wheel hijack here anymore.
+const projectsContainer = document.querySelector('.projects-scroll-container');
+const projectPanels = document.querySelectorAll('.project-panel');
+const arrowLeft = document.querySelector('.project-arrow-left');
+const arrowRight = document.querySelector('.project-arrow-right');
+
+if (projectsContainer && projectPanels.length) {
+    // Give every project panel a detection-style reticle (corner brackets +
+    // tracking tag), mirroring the bounding boxes his CV models draw.
+    projectPanels.forEach(panel => {
+        const corners = ['tl', 'tr', 'bl', 'br'].map(pos => {
+            const el = document.createElement('span');
+            el.className = `reticle-corner ${pos}`;
+            return el;
+        });
+        const tag = document.createElement('span');
+        tag.className = 'reticle-tag';
+        tag.textContent = '// TRACKING';
+        panel.append(...corners, tag);
+    });
+
+    const scrollByPanel = (direction) => {
+        const gap = 32; // matches the 2rem gap between panels in CSS
+        const amount = projectPanels[0].offsetWidth + gap;
+        projectsContainer.scrollBy({ left: direction * amount, behavior: 'smooth' });
+    };
+
+    if (arrowLeft) arrowLeft.addEventListener('click', () => scrollByPanel(-1));
+    if (arrowRight) arrowRight.addEventListener('click', () => scrollByPanel(1));
+
+    // Only let left/right arrow keys navigate projects while that section is on screen
+    let projectsInView = false;
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+        const projectsVisibilityObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { projectsInView = entry.isIntersecting; });
+        }, { threshold: 0.3 });
+        projectsVisibilityObserver.observe(projectsSection);
+    }
+
+    document.addEventListener('keydown', (e) => {
+        const activeTag = document.activeElement ? document.activeElement.tagName : '';
+        if (activeTag === 'INPUT' || activeTag === 'TEXTAREA') return;
+        if (!projectsInView) return;
+
+        if (e.key === 'ArrowRight') {
+            e.preventDefault();
+            scrollByPanel(1);
+        } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            scrollByPanel(-1);
+        }
+    });
+
+    // Highlight whichever panel is closest to the center of the container
+    // (scale + border, deliberately no glow/box-shadow effect)
+    const updateActivePanel = () => {
+        const containerRect = projectsContainer.getBoundingClientRect();
+        const containerCenter = containerRect.left + containerRect.width / 2;
+
+        let closestPanel = null;
+        let closestDistance = Infinity;
+
+        projectPanels.forEach(panel => {
+            const rect = panel.getBoundingClientRect();
+            const panelCenter = rect.left + rect.width / 2;
+            const distance = Math.abs(panelCenter - containerCenter);
+            if (distance < closestDistance) {
+                closestDistance = distance;
+                closestPanel = panel;
+            }
+        });
+
+        projectPanels.forEach(panel => panel.classList.remove('is-active'));
+        if (closestPanel) closestPanel.classList.add('is-active');
+    };
+
+    let scrollTicking = false;
+    projectsContainer.addEventListener('scroll', () => {
+        if (!scrollTicking) {
+            window.requestAnimationFrame(() => {
+                updateActivePanel();
+                scrollTicking = false;
+            });
+            scrollTicking = true;
+        }
+    });
+
+    window.addEventListener('resize', updateActivePanel);
+    updateActivePanel();
+}
+
+// --- Contact Form Submission ---
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
-        
+
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
         const message = document.getElementById('message').value;
         const statusDiv = document.getElementById('form-status');
-        
+
         const scriptURL = 'https://script.google.com/macros/s/AKfycbyuhnD42BhJjLYoBvOVTkD_LbJlWwPMQYNRfWOEsNAgOlPqYUAawp-s61k4pKbx2LHrwA/exec';
-        
+
         statusDiv.style.display = 'block';
-        statusDiv.textContent = 'Sending message...';
-        statusDiv.style.color = '#2563eb';
-        
+        statusDiv.textContent = 'TRANSMITTING...';
+        statusDiv.style.color = 'var(--accent-main)';
+
         const formData = new FormData();
         formData.append('name', name);
         formData.append('email', email);
-        formData.append('subject', subject);
+        formData.append('subject', 'Portfolio Contact'); // Static subject since we removed it to keep it brutalist
         formData.append('message', message);
-        
+
         fetch(scriptURL, {
             method: 'POST',
             body: formData,
             mode: 'no-cors'
         })
-        .then(() => {
-            statusDiv.textContent = `Thank you, ${name}! Your message has been sent successfully.`;
-            statusDiv.style.color = '#2563eb';
-            contactForm.reset();
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            statusDiv.textContent = 'Sorry, there was an error. Please try again or email directly.';
-            statusDiv.style.color = '#ef4444';
-        });
+            .then(() => {
+                statusDiv.textContent = `TRANSMISSION SUCCESSFUL. CONFIRMATION SENT TO ${email.toUpperCase()}.`;
+                contactForm.reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                statusDiv.textContent = 'TRANSMISSION FAILED. PLEASE USE DIRECT EMAIL.';
+                statusDiv.style.color = '#ef4444';
+            });
     });
 }
-
-// Active navigation link on scroll
-const sections = document.querySelectorAll('section[id]');
-
-function highlightNavigation() {
-    const scrollY = window.pageYOffset;
-
-    sections.forEach(section => {
-        const sectionHeight = section.offsetHeight;
-        const sectionTop = section.offsetTop - 100;
-        const sectionId = section.getAttribute('id');
-        const navLink = document.querySelector(`.nav-links a[href="#${sectionId}"]`);
-
-        if (navLink && scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            navLink.classList.add('active');
-        } else if (navLink) {
-            navLink.classList.remove('active');
-        }
-    });
-}
-
-window.addEventListener('scroll', highlightNavigation);
-
-// Certificate Modal Functions
-function openCertificate(pdfPath) {
-    const modal = document.getElementById('certificateModal');
-    const iframe = document.getElementById('certificateFrame');
-    iframe.src = pdfPath;
-    modal.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-}
-
-function closeCertificate() {
-    const modal = document.getElementById('certificateModal');
-    const iframe = document.getElementById('certificateFrame');
-    modal.style.display = 'none';
-    iframe.src = '';
-    document.body.style.overflow = 'auto';
-}
-
-// Close modal when clicking outside
-window.onclick = function(event) {
-    const modal = document.getElementById('certificateModal');
-    if (event.target === modal) {
-        closeCertificate();
-    }
-}
-
-// Close modal with Escape key
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-        closeCertificate();
-    }
-});
